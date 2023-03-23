@@ -11,6 +11,10 @@ body{
 .main-container{
     display: flex;
     flex-direction: row;
+    column-gap: 15%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 18px;
 }
 .main-sidebar{
     display: flex;
@@ -70,12 +74,22 @@ body{
 .main-right{
     display: flex;
     flex-direction: column;
+    width: 45vw;
+    letter-spacing: 0.5px;
 }
 .main-header{
     display: flex;
     flex-direction: column;
+    
 }
-
+.header-top{
+    font-weight: 700;
+    font-size: 32px;
+}
+.header-bottom{
+    font-size: 15px;
+    color: rgb(143, 143, 143);
+}
 .main-body{
     display: flex;
     flex-direction: column;
@@ -84,10 +98,28 @@ body{
     display: flex;
     flex-direction: column;
 }
+.input-label{
+    font-size: 13px;
+}
 
 /* ----------------------------------------------- */
 
 .footer-buttons{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-left{
+    color:  rgb(143, 143, 143);
+    font-size: 14px;
+}
+.button-right button{
+    padding: 13px 20px;
+    border: none;
+    background-color: rgb(22, 22, 128);
+    color: white;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 7px;
 }
