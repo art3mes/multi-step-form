@@ -64,14 +64,16 @@
               <div class="input-label">Email Address</div>
               <div><input type="email" placeholder="e.g. gitinit@gmail.com"></div>
             </div>
-            <div class="inputs">
+            <div class="inputs" style="position:relative ;">
               <div class="input-label">Phone Number</div>
-              <div><input type="number" placeholder="e.g. +1 123 456 789" required></div>
+              <div><input type="number" oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0,10);" placeholder="e.g. 0123456789" required></div>
               <div class="error-message">This field is required.</div>
             </div>
-            <div class="footer-buttons">
-              <div class="button-left">Go Back</div>
-              <div class="button-right"><button type="s">Next Step</button></div>
+            <div class="footer-container">
+              <div class="footer-buttons">
+                <div class="button-left">Go Back</div>
+                <div class="button-right"><button type="s">Next Step</button></div>
+              </div>
             </div>
           </form>
         </div>
