@@ -101,6 +101,7 @@ body{
     flex-direction: column;
     row-gap: 6px;
     margin-bottom: 15px;
+    position: relative;
 }
 .input-label{
     font-size: 13px;
@@ -179,7 +180,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
     border-width: 2px;
 } 
 .error-message {
-    display: none;
+    display: flex;
     position: absolute;
     white-space: nowrap;
     right: 0;
@@ -187,3 +188,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
     color: red;
   }
   
+  .off{                  /* for the above class*/
+    display: none;
+  }

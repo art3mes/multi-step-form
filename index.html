@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
@@ -55,19 +56,21 @@
       </div>
       <div class="main-body">
         <div class="step1-body">  <!--form body-->
-          <form action="" method="post">
+          <form action="#" method="post" onsubmit="handleSubmit(event)">
             <div class="inputs">
               <div class="input-label">Name</div>
-              <div><input type="text" placeholder="e.g. Charles Darwin"></div>
+              <div><input type="text" placeholder="e.g. Charles Darwin" required></div>
+              <div class="error-message off">This field is required.</div>
             </div>
             <div class="inputs">
               <div class="input-label">Email Address</div>
-              <div><input type="email" placeholder="e.g. gitinit@gmail.com"></div>
+              <div><input type="email" placeholder="e.g. gitinit@gmail.com" required></div>
+              <div class="error-message off">This field is required.</div>
             </div>
-            <div class="inputs" style="position:relative ;">
+            <div class="inputs">
               <div class="input-label">Phone Number</div>
-              <div><input type="number" oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0,10);" placeholder="e.g. 0123456789" required></div>
-              <div class="error-message">This field is required.</div>
+              <div><input type="number" required oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0,10);" placeholder="e.g. 0123456789" ></div>
+              <div class="error-message off">This field is required.</div>
             </div>
             <div class="footer-container">
               <div class="footer-buttons">
