@@ -199,8 +199,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   .switch {
     position: relative;
     display: flex;
-    width: 60px;
-    height: 34px;
+    width: 45px;
+    height: 22px;
     margin: 10px;
   }
   
@@ -216,7 +216,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(30, 103, 186);
+    background-color: rgb(37, 36, 36);
     border-radius: 34px;
     transition: .4s;
   }
@@ -224,25 +224,25 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 15px;
+    width: 15px;
+    left: 3px;
+    bottom: 3.5px;
     background-color: white;
     border-radius: 50%;
     transition: .4s;
   }
   
   input:checked + .slider {
-    background-color: rgb(30, 103, 186);
+    background-color: rgb(37, 36, 36);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px rgb(30, 103, 186);
+    box-shadow: 0 0 1px rgb(37, 36, 36);
   }
   
   input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(24px);
   }
   
   /* Prevent slider color change on hover */
@@ -256,4 +256,59 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   
 .step1-body{
     display: none;           /*remove this*/
+}
+
+
+/*-----------------step2----------------------------*/
+
+.step2-body{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.plan-types{
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+.plan-one,.plan-two,.plan-three{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 8px;
+  padding: 15px;
+  height: 150px;
+  width: 130px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.plan-info{
+  font-weight: 700;
+  letter-spacing: normal;
+  font-size: 15px;
+}
+.plan-cost{
+  font-weight: 400;
+  font-size: 13px;
+  color: gray;
+}
+.plan-one:hover,.plan-two:hover,.plan-three:hover{
+  background-color: rgb(252, 228, 255);
+  border-color: black;
+}
+
+.month-year{
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  margin-right: 12px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: gray;
+  font-weight: 500;
+  letter-spacing: normal;
 }
