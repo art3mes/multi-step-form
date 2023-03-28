@@ -254,15 +254,15 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   
 /*----------------------------------------------------*/
   
-.step1-body{
+/* .step1-body{
     display: none;           /*remove this*/
-}
+/* } */
 
 
 /*-----------------step2----------------------------*/
 
 .step2-body{
-  display: flex;
+  display:none;
   flex-direction: column;
   row-gap: 30px;
 }

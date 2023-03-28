@@ -11,6 +11,7 @@ function handleSubmit(event){
     $(".header-bottom").text(subHeading);
 
     $(".step1-body").css('display','none');
+    $(".step2-body").css('display','flex');
     $(".global").css('display','flex');
     
 }
