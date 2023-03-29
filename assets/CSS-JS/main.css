@@ -254,9 +254,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   
 /*----------------------------------------------------*/
   
-/* .step1-body{
+.step1-body,.step2-body{
     display: none;           /*remove this*/
-/* } */
+ } 
 
 
 /*-----------------step2----------------------------*/
@@ -311,4 +311,54 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   color: gray;
   font-weight: 500;
   letter-spacing: normal;
+}
+
+/*-------------------------------------------*/
+
+.step3-body{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  letter-spacing: 0;
+}
+.add-on1,.add-on2,.add-on3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid purple;
+  padding: 20px;
+  border-radius: 7px;
+}
+.add-on1:hover,.add-on2:hover,.add-on3:hover,.checkbox input:hover{
+  cursor: pointer;
+  background-color: aliceblue;
+}
+
+.add-on-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+.add-onText{
+  display: flex;
+  flex-direction: column;
+}
+.checkbox{
+  /* Double-sized Checkboxes */
+  transform: scale(1.3);
+}
+.add-onText-top{
+  font-weight: 700;
+  font-size: 17px;
+}
+.add-onText-bottom{
+  font-size: 14px;
+  color: gray;
+}
+.add-onCost{
+  font-size: 13px;
+  color: rgb(75, 75, 207);
+  font-weight: 500;
 }
