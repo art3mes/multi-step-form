@@ -316,7 +316,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
 /*-------------------------------------------*/
 
 .step3-body{
-  display: flex;
+  display:none;
   flex-direction: column;
   row-gap: 15px;
   letter-spacing: 0;
@@ -361,4 +361,53 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   font-size: 13px;
   color: rgb(75, 75, 207);
   font-weight: 500;
+}
+
+/*--------------------------------------------------*/
+.step4-body{
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0;
+  font-size: 14px;
+  color: rgb(151, 150, 150);
+}
+.info-top{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: aliceblue;
+  padding: 25px;
+  border-radius: 5px;
+}
+.info-top-r1,.info-top-r2,.info-top-r3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-top-r1{
+  border-bottom: 1px solid rgb(158, 158, 158);
+  font-size: 15px;
+  padding-bottom: 20px;
+  font-weight: 700;
+  color: black;
+}
+.info-top-r1-left-bottom a{
+  font-weight: 400;
+  font-size: 13px;
+}
+.info-top-r-right{
+  color:rgb(58, 58, 58) ;
+}
+.info-bottom-r-right{
+  font-size: 22px;
+  color: rgb(57, 226, 170);
+  font-weight: 700;
+}
+.info-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
 }
