@@ -18,3 +18,9 @@ function handleSubmit(event){
     $(".global").css('display','flex');
     
 }
+
+function toggleCheckbox(checkboxNumber) {       //toggling checkbox when clicked anywhere
+    var checkbox = document.getElementById("checkbox" + checkboxNumber);
+    checkbox.checked = !checkbox.checked;
+  }
+  
