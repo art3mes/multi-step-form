@@ -77,6 +77,8 @@ body{
     letter-spacing: 0.5px;
     margin-top: 30px;
     position: relative;
+    /* align-items: center;            
+    justify-content: center; */
 }
 .main-header{
     display: flex;
@@ -94,7 +96,6 @@ body{
 .main-body{
     display: flex;
     flex-direction: column;
-    
 }
 .inputs{
     display: flex;
@@ -265,6 +266,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   display:none;
   flex-direction: column;
   row-gap: 30px;
+  letter-spacing: 0;
 }
 .plan-types{
   display: flex;
@@ -278,7 +280,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   border: 1px solid rgb(202, 202, 202);
   border-radius: 8px;
   padding: 15px;
-  height: 150px;
+  height: 180px;
   width: 130px;
   cursor: pointer;
   transition: all 0.3s;
@@ -312,7 +314,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   font-weight: 500;
   letter-spacing: normal;
 }
-
+.plan-yearly{
+  display: flex;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(135, 135, 255);
+}
 /*-------------------------------------------*/
 
 .step3-body{
@@ -365,7 +372,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
 
 /*--------------------------------------------------*/
 .step4-body{
-  display: flex;
+  display: none;
   flex-direction: column;
   letter-spacing: 0;
   font-size: 14px;
@@ -410,4 +417,26 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   justify-content: space-between;
   align-items: center;
   padding: 25px;
+}
+/*---------------------------------------------------*/
+.final-step{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+  flex-direction: column;
+  text-align: center;
+  height: 500px;
+  margin-left: -70px;
+}
+
+.final-step-thank{
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.final-step-text{
+  font-size: 18px;
+  color: gray;
+  width: 520px;
 }
