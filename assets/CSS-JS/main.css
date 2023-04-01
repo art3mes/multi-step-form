@@ -255,9 +255,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   
 /*----------------------------------------------------*/
   
-.step1-body,.step2-body{
+/* .step1-body,.step2-body{
     display: none;           /*remove this*/
- } 
+ /*}  */
 
 
 /*-----------------step2----------------------------*/
@@ -315,7 +315,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   letter-spacing: normal;
 }
 .plan-yearly{
-  display: flex;
+  display: none;
   font-size: 12px;
   font-weight: 400;
   color: rgb(135, 135, 255);
@@ -420,7 +420,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
 }
 /*---------------------------------------------------*/
 .final-step{
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   row-gap: 15px;

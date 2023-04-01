@@ -51,13 +51,13 @@
       
     </div>
     <div class="main-right">
-      <!-- <div class="main-header">
+      <div class="main-header">
         <div class="header-top">Personal info</div>
         <div class="header-bottom">Please provide your name, email address, and phone number.</div>
-      </div> -->
+      </div>
       <div class="main-body">
         <div class="step1-body">  <!--form body-->
-          <form action="#" method="post" onsubmit="handleSubmit(event)">
+          <form action="javascript:void(0);" method="post" onsubmit="pageNo2()">
             <div class="inputs">
               <div class="input-label">Name</div>
               <div><input type="text" placeholder="e.g. Charles Darwin" ></div>
@@ -112,8 +112,8 @@
           <div class="month-year">
             <div>Monthly</div>
             <div>
-              <label class="switch">
-                <input type="checkbox">
+              <label class="switch" >
+                <input type="checkbox" onclick="toggleMonthYear()">
                 <span class="slider"></span>
               </label>
             </div>
@@ -187,8 +187,8 @@
         </div>
 
         <div class="footer-buttons">
-          <div class="button-left global">Go Back</div>
-          <div class="button-right global"><button type="s">Next Step</button></div>
+          <div class="button-left global" onclick="pageChangerBackward()">Go Back</div>
+          <div class="button-right global" onclick="pageChangerForward()"><button type="s">Next Step</button></div>
         </div>
        
       </div>
@@ -199,25 +199,3 @@
  
 </body>
 </html>
- 
-   
-   
- 
-   <!-- Dynamically add subscription and add-on selections here 
- 
-   Total (per month/year)
- 
-   Go Back
-   Confirm
- 
-   <!-- Step 4 end -->
- 
-   <!-- Step 5 start
- 
-   Thank you!
- 
-   
- 
-   <!-- Step 5 end -->
-   
-   
