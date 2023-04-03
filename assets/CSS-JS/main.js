@@ -31,7 +31,6 @@ function pageChangerForward(){
     if(pageNo==5){
         finalPage();
     }
-
 }
 function pageChangerBackward(){
     pageNo--;
@@ -61,7 +60,6 @@ function pageNo1(){
 }
 
 function pageNo2(){
-    
     console.log("2");
     // $(".button-left").css('display','flex');     //go back button reappear
 
@@ -86,7 +84,6 @@ function pageNo3(){
     $(".step4-body").css('display','none');
    // $(".global").css('display','flex');
 }
-
 function pageNo4(){
     console.log("4");
     $(".header-top").text(heading_step4);
