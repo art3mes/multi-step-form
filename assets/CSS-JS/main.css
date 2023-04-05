@@ -115,7 +115,7 @@ body{
 }
 
 .footer-buttons{
-   
+   user-select: none;
 }
 .button-left{
     color:  rgb(143, 143, 143);

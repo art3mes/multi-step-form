@@ -49,6 +49,8 @@ function pageChangerBackward(){
     }
 }
 function pageNo1(){
+    console.log(pageNo);
+    sidebarActiveToggler(pageNo);
     footerRightButtonTextColor()
     $(".header-top").text(heading_step1);
     $(".header-bottom").text(subHeading_step1);
@@ -61,7 +63,9 @@ function pageNo1(){
 }
 
 function pageNo2(){
-    console.log("2");
+    pageNo=2;            //submit button is pressed. now on page 2
+    console.log(pageNo);
+    sidebarActiveToggler(pageNo);
     footerRightButtonTextColor()
     // $(".button-left").css('display','flex');     //go back button reappear
 
@@ -73,10 +77,11 @@ function pageNo2(){
     $(".step3-body").css('display','none');
     $(".step4-body").css('display','none');
     $(".global").css('display','flex');
-    pageNo=2;            //submit button is pressed. now on page 2
+    
 }
 function pageNo3(){
-    console.log("3");
+    console.log(pageNo);
+    sidebarActiveToggler(pageNo);
     footerRightButtonTextColor()
     $(".header-top").text(heading_step3);
     $(".header-bottom").text(subHeading_step3);
@@ -88,7 +93,8 @@ function pageNo3(){
    // $(".global").css('display','flex');
 }
 function pageNo4(){
-    console.log("4");
+    console.log(pageNo);
+    sidebarActiveToggler(pageNo);
     footerRightButtonTextColor()
     $(".header-top").text(heading_step4);
     $(".header-bottom").text(subHeading_step4);
@@ -100,7 +106,7 @@ function pageNo4(){
     //$(".global").css('display','flex');
 }
 function finalPage(){
-    console.log("5");
+    console.log(pageNo);
     $(".main-header").css('display','none');
     // $(".step1-body").css('display','none');
     // $(".step2-body").css('display','none');
@@ -123,14 +129,11 @@ function footerRightButtonTextColor(){
         $(".footer-buttons .button-right button").css("background-color","rgb(22, 22, 128)")
     }
 }
-
-
 function toggleCheckbox(checkboxNumber) {       //toggling checkbox when clicked anywhere
     var checkbox = document.getElementById("checkbox" + checkboxNumber);
     checkbox.checked = !checkbox.checked;
-  }
-
-  let flag='m';
+}
+let flag='m';
 function toggleMonthYear(){
     if(flag=='m'){
         $(".plan-yearly").css('display','flex');
@@ -141,4 +144,17 @@ function toggleMonthYear(){
         flag='m';
     }
 
+}
+function sidebarActiveToggler(stepNo){
+    const arr=[1,2,3,4];
+    for(let a=1;a<=4;a++){
+        if(stepNo==a){
+            console.log("eq");
+            $(".sidebar-step:nth-of-type("+pageNo+") .step-left").toggleClass("active");
+        }
+        else{
+            console.log("uneq");
+            $(".sidebar-step:nth-of-type("+pageNo+") .step-left").toggleClass("active");
+        }
+    }
 }
