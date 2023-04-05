@@ -49,6 +49,7 @@ function pageChangerBackward(){
     }
 }
 function pageNo1(){
+    footerRightButtonTextColor()
     $(".header-top").text(heading_step1);
     $(".header-bottom").text(subHeading_step1);
 
@@ -61,11 +62,12 @@ function pageNo1(){
 
 function pageNo2(){
     console.log("2");
+    footerRightButtonTextColor()
     // $(".button-left").css('display','flex');     //go back button reappear
 
     $(".header-top").text(heading_step2);
     $(".header-bottom").text(subHeading_step2);
-
+    
     $(".step1-body").css('display','none');
     $(".step2-body").css('display','flex');
     $(".step3-body").css('display','none');
@@ -75,10 +77,11 @@ function pageNo2(){
 }
 function pageNo3(){
     console.log("3");
+    footerRightButtonTextColor()
     $(".header-top").text(heading_step3);
     $(".header-bottom").text(subHeading_step3);
 
-    $(".step1-body").css('display','none');
+   // $(".step1-body").css('display','none');
     $(".step2-body").css('display','none');
     $(".step3-body").css('display','flex');
     $(".step4-body").css('display','none');
@@ -86,11 +89,12 @@ function pageNo3(){
 }
 function pageNo4(){
     console.log("4");
+    footerRightButtonTextColor()
     $(".header-top").text(heading_step4);
     $(".header-bottom").text(subHeading_step4);
 
-    $(".step1-body").css('display','none');
-    $(".step2-body").css('display','none');
+  //  $(".step1-body").css('display','none');
+  //  $(".step2-body").css('display','none');
     $(".step3-body").css('display','none');
     $(".step4-body").css('display','flex');
     //$(".global").css('display','flex');
@@ -98,9 +102,9 @@ function pageNo4(){
 function finalPage(){
     console.log("5");
     $(".main-header").css('display','none');
-    $(".step1-body").css('display','none');
-    $(".step2-body").css('display','none');
-    $(".step3-body").css('display','none');
+    // $(".step1-body").css('display','none');
+    // $(".step2-body").css('display','none');
+    // $(".step3-body").css('display','none');
     $(".step4-body").css('display','none');
     $(".final-step").css('display','flex');
     $(".global").css('display','none');
@@ -109,8 +113,16 @@ function finalPage(){
 function preventDefaults(event){
     event.preventDefault();
 }
-
-
+function footerRightButtonTextColor(){
+    if (pageNo===4){
+        $(".footer-buttons .button-right button").text("Confirm");
+        $(".footer-buttons .button-right button").css("background-color","rgb(68, 68, 181)")
+    }
+    else{
+        $(".footer-buttons .button-right button").text("Next Step");
+        $(".footer-buttons .button-right button").css("background-color","rgb(22, 22, 128)")
+    }
+}
 
 
 function toggleCheckbox(checkboxNumber) {       //toggling checkbox when clicked anywhere
