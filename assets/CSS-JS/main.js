@@ -145,16 +145,3 @@ function toggleMonthYear(){
     }
 
 }
-function sidebarActiveToggler(stepNo){
-    const arr=[1,2,3,4];
-    for(let a=1;a<=4;a++){
-        if(stepNo==a){
-            console.log("eq");
-            $(".sidebar-step:nth-of-type("+pageNo+") .step-left").toggleClass("active");
-        }
-        else{
-            console.log("uneq");
-            $(".sidebar-step:nth-of-type("+pageNo+") .step-left").toggleClass("active");
-        }
-    }
-}
