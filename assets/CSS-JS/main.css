@@ -15,7 +15,8 @@ body{
     background-color: white;
     padding: 15px;
     border-radius: 18px;
-    width: 910px;             /* white main container*/
+    width: 52vw;             /* white main container*/
+    min-width: 760px;
 }
 .main-sidebar{
     display: flex;
@@ -84,6 +85,7 @@ body{
     display: flex;
     flex-direction: column;
     margin-bottom: 2.5rem;
+    width:   24vw;
 }
 .header-top{
     font-weight: 700;
@@ -104,6 +106,9 @@ body{
     margin-bottom: 15px;
     position: relative;
 }
+.inputs div input{
+  width:   24vw;
+}
 .input-label{
     font-size: 13px;
 }
@@ -121,7 +126,7 @@ body{
     color:  rgb(143, 143, 143);
     font-size: 14px;
     position: absolute;
-    bottom: 1.7rem;
+    bottom: 2rem;
     left: 0;
 
     display: none;
@@ -267,6 +272,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   flex-direction: column;
   row-gap: 30px;
   letter-spacing: 0;
+  width:   24vw;
 }
 .plan-types{
   display: flex;
@@ -327,13 +333,14 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   flex-direction: column;
   row-gap: 15px;
   letter-spacing: 0;
+  width: 24vw;
 }
 .add-on1,.add-on2,.add-on3{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  column-gap: 7rem;
+  column-gap: 7vw;
   border: 1px solid purple;
   padding: 20px;
   border-radius: 7px;
@@ -378,6 +385,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   letter-spacing: 0;
   font-size: 14px;
   color: rgb(151, 150, 150);
+  width:   24vw;
 }
 .info-top{
   display: flex;
