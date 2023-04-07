@@ -50,10 +50,15 @@ function pageChangerBackward(){
 }
 function pageNo1(){
     console.log(pageNo);
-    sidebarActiveToggler(pageNo);
+    
     footerRightButtonTextColor()
     $(".header-top").text(heading_step1);
     $(".header-bottom").text(subHeading_step1);
+
+    $(".sidebar-step:nth-of-type(1) .step-left").addClass("active");
+    $(".sidebar-step:nth-of-type(2) .step-left").removeClass("active");
+    $(".sidebar-step:nth-of-type(3) .step-left").removeClass("active");
+    $(".sidebar-step:nth-of-type(4) .step-left").removeClass("active");
 
     $(".step1-body").css('display','flex');
     $(".step2-body").css('display','none');
@@ -65,9 +70,14 @@ function pageNo1(){
 function pageNo2(){
     pageNo=2;            //submit button is pressed. now on page 2
     console.log(pageNo);
-    sidebarActiveToggler(pageNo);
+    
     footerRightButtonTextColor()
     // $(".button-left").css('display','flex');     //go back button reappear
+
+    $(".sidebar-step:nth-of-type(1) .step-left").removeClass("active");
+    $(".sidebar-step:nth-of-type(2) .step-left").addClass("active");
+    $(".sidebar-step:nth-of-type(3) .step-left").removeClass("active");
+    $(".sidebar-step:nth-of-type(4) .step-left").removeClass("active");
 
     $(".header-top").text(heading_step2);
     $(".header-bottom").text(subHeading_step2);
@@ -81,11 +91,15 @@ function pageNo2(){
 }
 function pageNo3(){
     console.log(pageNo);
-    sidebarActiveToggler(pageNo);
+    
     footerRightButtonTextColor()
     $(".header-top").text(heading_step3);
     $(".header-bottom").text(subHeading_step3);
 
+    $(".sidebar-step:nth-of-type(1) .step-left").removeClass("active");
+    $(".sidebar-step:nth-of-type(2) .step-left").removeClass("active");
+    $(".sidebar-step:nth-of-type(3) .step-left").addClass("active");
+    $(".sidebar-step:nth-of-type(4) .step-left").removeClass("active");
    // $(".step1-body").css('display','none');
     $(".step2-body").css('display','none');
     $(".step3-body").css('display','flex');
@@ -94,11 +108,15 @@ function pageNo3(){
 }
 function pageNo4(){
     console.log(pageNo);
-    sidebarActiveToggler(pageNo);
+    
     footerRightButtonTextColor()
     $(".header-top").text(heading_step4);
     $(".header-bottom").text(subHeading_step4);
 
+    $(".sidebar-step:nth-of-type(1) .step-left").removeClass("active");
+    $(".sidebar-step:nth-of-type(2) .step-left").removeClass("active");
+    $(".sidebar-step:nth-of-type(3) .step-left").removeClass("active");
+    $(".sidebar-step:nth-of-type(4) .step-left").addClass("active");
   //  $(".step1-body").css('display','none');
   //  $(".step2-body").css('display','none');
     $(".step3-body").css('display','none');
