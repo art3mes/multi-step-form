@@ -303,7 +303,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   color: gray;
 }
 .plan-one:hover,.plan-two:hover,.plan-three:hover{
-  background-color: #dcdcff;
+  background-color: #f2f2ff;
   border-color: black;
 }
 
@@ -437,7 +437,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   flex-direction: column;
   text-align: center;
   height: 500px;
-  margin-left: -70px;
+  margin-left: -80px;
 }
 
 .final-step-thank{

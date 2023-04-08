@@ -155,10 +155,24 @@ let flag='m';
 function toggleMonthYear(){
     if(flag=='m'){
         $(".plan-yearly").css('display','flex');
+        $(".plan-one .plan-cost").text("$90/yr");
+        $(".plan-two .plan-cost").text("$120/yr");
+        $(".plan-three .plan-cost").text("$150/yr");
+
+        $(".add-on1 .add-onCost").text("$10/yr");
+        $(".add-on2 .add-onCost").text("$20/yr");
+        $(".add-on3 .add-onCost").text("$20/yr");
         flag='y';
     }
     else{
         $(".plan-yearly").css('display','none');
+        $(".plan-one .plan-cost").text("$9/mo");
+        $(".plan-two .plan-cost").text("$12/mo");
+        $(".plan-three .plan-cost").text("$15/mo");
+
+        $(".add-on1 .add-onCost").text("$1/mo");
+        $(".add-on2 .add-onCost").text("$2/mo");
+        $(".add-on3 .add-onCost").text("$2/mo");
         flag='m';
     }
 
