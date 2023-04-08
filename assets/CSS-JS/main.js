@@ -140,11 +140,11 @@ function preventDefaults(event){
 function footerRightButtonTextColor(){
     if (pageNo===4){
         $(".footer-buttons .button-right button").text("Confirm");
-        $(".footer-buttons .button-right button").css("background-color","rgb(68, 68, 181)")
+        $(".footer-buttons .button-right button").css("background-color","#938dff")
     }
     else{
         $(".footer-buttons .button-right button").text("Next Step");
-        $(".footer-buttons .button-right button").css("background-color","rgb(22, 22, 128)")
+        $(".footer-buttons .button-right button").css("background-color","#03285b")
     }
 }
 function toggleCheckbox(checkboxNumber) {       //toggling checkbox when clicked anywhere

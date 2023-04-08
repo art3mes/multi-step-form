@@ -1,5 +1,5 @@
 body{
-    background-color: peachpuff;
+    background-color: rgb(219, 233, 255);
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
@@ -66,7 +66,7 @@ body{
     font-weight: 500;
 }
 .active{
-    background-color: aquamarine;
+    background-color: rgba(190,224,249,255);
     color: black;
 }
 /* ---------------------------------------------- */
@@ -134,9 +134,10 @@ body{
 .button-right button{
     padding: 13px 20px;
     border: none;
-    background-color: rgb(22, 22, 128);
+    background-color: #03285b;
     color: white;
     font-size: 14px;
+    font-weight: 500;
     font-family: 'Ubuntu', sans-serif;
     border-radius: 7px;
 
@@ -302,7 +303,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   color: gray;
 }
 .plan-one:hover,.plan-two:hover,.plan-three:hover{
-  background-color: rgb(252, 228, 255);
+  background-color: #dcdcff;
   border-color: black;
 }
 
@@ -340,14 +341,14 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  column-gap: 7vw;
+  
   border: 1px solid purple;
   padding: 20px;
   border-radius: 7px;
 }
 .add-on1:hover,.add-on2:hover,.add-on3:hover,.checkbox input:hover{
   cursor: pointer;
-  background-color: aliceblue;
+  background-color: #f8f8ff;
 }
 
 .add-on-left{
@@ -391,7 +392,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  background-color: aliceblue;
+  background-color: #f8f8ff;
   padding: 25px;
   border-radius: 5px;
 }
