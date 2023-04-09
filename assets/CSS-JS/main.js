@@ -177,3 +177,5 @@ function toggleMonthYear(){
     }
 
 }
+//make an array and store the options that are choosen.
+//then update the page 4 based on that
