@@ -177,5 +177,13 @@ function toggleMonthYear(){
     }
 
 }
+function planSelector(event){
+    let plans=["plan-one","plan-two","plan-three"];
+    for(let a=0;a<plans.length;a++){
+        $("."+plans[a]).removeClass("selected-plan");
+    }
+    $("."+event.className).addClass("selected-plan");
+
+}
 //make an array and store the options that are choosen.
 //then update the page 4 based on that

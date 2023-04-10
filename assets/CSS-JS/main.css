@@ -292,6 +292,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   cursor: pointer;
   transition: all 0.3s;
 }
+.selected-plan {
+  border: 1px solid black;
+  background-color: #f2f2ff;
+}
 .plan-info{
   font-weight: 700;
   letter-spacing: normal;
