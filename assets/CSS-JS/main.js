@@ -11,6 +11,9 @@ const subHeading_step3="Add-ons help enhance your gaming experience";
 const heading_step4="Finishing up";
 const subHeading_step4="Double-check everything before confirming.";
 
+let priceArray=[];
+let monthYearFlag=0;    //0 means month format
+
 let pageNo=1;
 
 function pageChangerForward(){
@@ -178,12 +181,60 @@ function toggleMonthYear(){
 
 }
 function planSelector(event){
+    priceArray=[];
+    if(event.className==="plan-one"){
+        priceArray.push(9);
+    }
+    else if(event.className==="plan-two"){
+        priceArray.push(12);
+    }
+    else{
+        priceArray.push(15);
+    }
+    console.log(priceArray);
+
     let plans=["plan-one","plan-two","plan-three"];
     for(let a=0;a<plans.length;a++){
         $("."+plans[a]).removeClass("selected-plan");
     }
     $("."+event.className).addClass("selected-plan");
-
+    
 }
-//make an array and store the options that are choosen.
-//then update the page 4 based on that
+let flagAddon=0,flagAddon1=0,flagAddon2=0; //0 = new value
+function addOnSelector(event){
+    console.log(event.className);
+     
+    if(event.className==="add-on1"){
+        if(flagAddon==0){
+          priceArray.push(1);  
+          flagAddon=1;
+        }
+        else{
+            priceArray.pop(1);
+            flagAddon=0;
+        }
+    }
+    else if(event.className==="add-on2"){
+        if(flagAddon1==0){
+            priceArray.push(2);  
+            flagAddon1=1;
+          }
+          else{
+              priceArray.pop(2);
+              flagAddon1=0;
+          }
+        
+    }
+    else{
+        if(flagAddon2==0){
+            priceArray.push(2);  
+            flagAddon2=1;
+          }
+          else{
+              priceArray.pop(2);
+              flagAddon2=0;
+          }
+        
+    }
+    //console.log(priceArray);
+}
