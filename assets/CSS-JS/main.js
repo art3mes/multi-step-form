@@ -166,6 +166,7 @@ function toggleMonthYear(){
         $(".add-on2 .add-onCost").text("$20/yr");
         $(".add-on3 .add-onCost").text("$20/yr");
         flag='y';
+        monthYearFlag=1;  // year format
     }
     else{
         $(".plan-yearly").css('display','none');
@@ -177,6 +178,7 @@ function toggleMonthYear(){
         $(".add-on2 .add-onCost").text("$2/mo");
         $(".add-on3 .add-onCost").text("$2/mo");
         flag='m';
+        monthYearFlag=0; //month flag
     }
 
 }
@@ -236,5 +238,13 @@ function addOnSelector(event){
           }
         
     }
-    //console.log(priceArray);
+    console.log(priceArray);
+}
+function finalSummary(){
+    if(monthYearFlag==1){
+        for(var a=0;a<priceArray.length;a++){
+            priceArray[a]=priceArray[a]*10;
+        }
+    }
+    console.log(priceArray);
 }
