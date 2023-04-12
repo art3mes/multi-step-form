@@ -11,6 +11,15 @@ const subHeading_step3="Add-ons help enhance your gaming experience";
 const heading_step4="Finishing up";
 const subHeading_step4="Double-check everything before confirming.";
 
+const plans={
+    Arcade:9,
+    Advanced:12,
+    Pro:15,
+    'Online Service':1,
+    'Larger Storage':2,
+    'Customizable Profile':2
+};
+
 let priceArray=[];
 let monthYearFlag=0;    //0 means month format
 
@@ -248,13 +257,19 @@ function arrayPopper(itemName,array){
 }
 
 
-let counter=0;
 function finalSummary(){
-    if(monthYearFlag==1){
-        for(var a=0;a<priceArray.length;a++){
-            priceArray[a]=priceArray[a]*10;
+    
+    for(let a=0;a<priceArray.length;a++){
+        if( plans.hasOwnProperty(priceArray[a]) ) {
+            if(monthYearFlag==1){
+                $(".info-top-r1-left-top").text(priceArray[a]+" (Yearly)");
+                $(".info-top-r1-right").text("$"+plans[priceArray[a]]+"/yr");
+            }
+            else{
+                 $(".info-top-r1-left-top").text(priceArray[a]+" (Monthly)");
+                 $(".info-top-r1-right").text("$"+plans[priceArray[a]]+"/mo");
+            }
         }
     }
-    
     console.log(priceArray);
 }
