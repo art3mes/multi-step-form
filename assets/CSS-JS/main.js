@@ -185,13 +185,13 @@ function toggleMonthYear(){
 function planSelector(event){
     priceArray=[];
     if(event.className==="plan-one"){
-        priceArray.push(9);
+        priceArray.push("Arcade");
     }
     else if(event.className==="plan-two"){
-        priceArray.push(12);
+        priceArray.push("Advanced");
     }
     else{
-        priceArray.push(15);
+        priceArray.push("Pro");
     }
     console.log(priceArray);
 
@@ -208,43 +208,53 @@ function addOnSelector(event){
      
     if(event.className==="add-on1"){
         if(flagAddon==0){
-          priceArray.push(1);  
+          priceArray.push("Online Service");  
           flagAddon=1;
         }
         else{
-            priceArray.pop(1);
+            arrayPopper("Online Service",priceArray);
             flagAddon=0;
         }
     }
     else if(event.className==="add-on2"){
         if(flagAddon1==0){
-            priceArray.push(2);  
+            priceArray.push("Larger Storage");  
             flagAddon1=1;
           }
           else{
-              priceArray.pop(2);
+              arrayPopper("Larger Storage",priceArray);
               flagAddon1=0;
           }
         
     }
     else{
         if(flagAddon2==0){
-            priceArray.push(2);  
+            priceArray.push("Customizable Profile");  
             flagAddon2=1;
           }
           else{
-              priceArray.pop(2);
+              arrayPopper("Customizable Profile",priceArray);
               flagAddon2=0;
           }
         
     }
     console.log(priceArray);
 }
+function arrayPopper(itemName,array){
+    const index = array.indexOf(itemName);
+    if (index > -1) { // only splice array when item is found
+    array.splice(index, 1); // 2nd parameter means remove one item only
+    }
+}
+
+
+let counter=0;
 function finalSummary(){
     if(monthYearFlag==1){
         for(var a=0;a<priceArray.length;a++){
             priceArray[a]=priceArray[a]*10;
         }
     }
+    
     console.log(priceArray);
 }
