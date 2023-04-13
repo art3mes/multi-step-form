@@ -261,12 +261,12 @@ function finalSummary(){
     let sumTotal=0;
     for(let a=0;a<priceArray.length;a++){
         if( plans.hasOwnProperty(priceArray[a]) ) {
+            sumTotal=sumTotal+plans[priceArray[a]];
             if(monthYearFlag==1){
                 $(".info-top-r1-left-top").text(priceArray[a]+" (Yearly)");
-                $(".info-top-r1-right").text("$"+plans[priceArray[a]]+"/yr");
+                $(".info-top-r1-right").text("$"+plans[priceArray[a]]*10+"/yr");
             }
             else{
-                sumTotal=sumTotal+plans[priceArray[a]];
                  $(".info-top-r1-left-top").text(priceArray[a]+" (Monthly)");
                  $(".info-top-r1-right").text("$"+plans[priceArray[a]]+"/mo");
             }
@@ -280,16 +280,25 @@ function finalSummary(){
     for(let a=0;a<3;a++){
         if(a<priceArray.length-1){
             sumTotal=sumTotal+plans[priceArray[a+1]];
+            if(monthYearFlag==0){
+                $(".info-top-r"+(a+2)+" .info-top-r-right").text("$"+plans[priceArray[a+1]]+"/mo");
+            }
+            else{
+                $(".info-top-r"+(a+2)+" .info-top-r-right").text("$"+plans[priceArray[a+1]]*10+"/yr");
+            }
             $(".info-top-r"+(a+2)+" .info-top-r-left").text(priceArray[a+1]);
-            $(".info-top-r"+(a+2)+" .info-top-r-right").text("$"+plans[priceArray[a+1]]+"/mo");
         }
         else{
             $(".info-top-r"+(a+2)).css('display','none');
         }
     }
-
-    
-    $(".info-bottom .info-bottom-r-left").text("Total (per month)");
-    $(".info-bottom .info-bottom-r-right").text("$"+sumTotal+"/mo");
+    if(monthYearFlag==0){
+        $(".info-bottom .info-bottom-r-right").text("$"+sumTotal+"/mo");
+        $(".info-bottom .info-bottom-r-left").text("Total (per month)");
+    }
+    else{
+        $(".info-bottom .info-bottom-r-left").text("Total (per year)");
+        $(".info-bottom .info-bottom-r-right").text("$"+sumTotal*10+"/yr");
+    }
     console.log(priceArray);
 }
