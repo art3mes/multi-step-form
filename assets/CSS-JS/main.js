@@ -25,6 +25,8 @@ let monthYearFlag=0;    //0 means month format
 
 let pageNo=1;
 
+///////////////////////////////////////////////////////////////////////////////
+
 function pageChangerForward(){
    pageNo++;
     switch(pageNo){
@@ -38,6 +40,7 @@ function pageChangerForward(){
             pageNo3();
             break;
         case 4:
+            finalSummary();
             pageNo4();
     }
     if(pageNo==5){
@@ -60,6 +63,9 @@ function pageChangerBackward(){
             pageNo4();
     }
 }
+
+////////////////////////////////////////////////////////////////////////////////
+
 function pageNo1(){
     console.log(pageNo);
     
@@ -145,6 +151,8 @@ function finalPage(){
     $(".global").css('display','none');
 }
 
+/////////////////////////////////////////////////////////////////////////////
+
 function preventDefaults(event){
     event.preventDefault();
 }
@@ -157,10 +165,6 @@ function footerRightButtonTextColor(){
         $(".footer-buttons .button-right button").text("Next Step");
         $(".footer-buttons .button-right button").css("background-color","#03285b")
     }
-}
-function toggleCheckbox(checkboxNumber) {       //toggling checkbox when clicked anywhere
-    var checkbox = document.getElementById("checkbox" + checkboxNumber);
-    checkbox.checked = !checkbox.checked;
 }
 let flag='m';
 function toggleMonthYear(){
@@ -192,7 +196,7 @@ function toggleMonthYear(){
 }
 function planSelector(event){
     priceArray=[];
-    uncheckAll();
+    uncheckAll();         //if plan is changed, uncheck all checkboxes of step 3
     if(event.className==="plan-one"){
         priceArray.push("Arcade");
     }
@@ -255,15 +259,17 @@ function arrayPopper(itemName,array){
     array.splice(index, 1); // 2nd parameter means remove one item only
     }
 }
+function toggleCheckbox(checkboxNumber) {       //toggling checkbox when clicked anywhere
+    var checkbox = document.getElementById("checkbox" + checkboxNumber);
+    checkbox.checked = !checkbox.checked;
+}
 function uncheckAll() {
     var checkboxes = document.querySelectorAll('.step3-body input[type=checkbox]');
     for (var i = 0; i < checkboxes.length; i++) {
       checkboxes[i].checked = false;
     }
     flagAddon=0,flagAddon1=0,flagAddon2=0;
-  }
-  
-
+}
 function finalSummary(){
     let sumTotal=0;
     for(let a=0;a<priceArray.length;a++){
