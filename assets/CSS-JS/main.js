@@ -103,7 +103,6 @@ function pageNo2(){
 }
 function pageNo3(){
     console.log(pageNo);
-    
     footerRightButtonTextColor()
     $(".header-top").text(heading_step3);
     $(".header-bottom").text(subHeading_step3);
@@ -193,6 +192,7 @@ function toggleMonthYear(){
 }
 function planSelector(event){
     priceArray=[];
+    uncheckAll();
     if(event.className==="plan-one"){
         priceArray.push("Arcade");
     }
@@ -255,12 +255,19 @@ function arrayPopper(itemName,array){
     array.splice(index, 1); // 2nd parameter means remove one item only
     }
 }
-
+function uncheckAll() {
+    var checkboxes = document.querySelectorAll('.step3-body input[type=checkbox]');
+    for (var i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = false;
+    }
+    flagAddon=0,flagAddon1=0,flagAddon2=0;
+  }
+  
 
 function finalSummary(){
     let sumTotal=0;
     for(let a=0;a<priceArray.length;a++){
-        if( plans.hasOwnProperty(priceArray[a]) ) {
+        if( plans.hasOwnProperty(priceArray[a]) ) {             //top base plan
             sumTotal=sumTotal+plans[priceArray[a]];
             if(monthYearFlag==1){
                 $(".info-top-r1-left-top").text(priceArray[a]+" (Yearly)");
@@ -273,11 +280,11 @@ function finalSummary(){
         }
         break;
     }
-    for(let a=0;a<3;a++){
+    for(let a=0;a<3;a++){                 //making the divs that are gone, reappear again
         $(".info-top-r"+(a+2)).css('display','flex');
     }
     
-    for(let a=0;a<3;a++){
+    for(let a=0;a<3;a++){              //add-ons
         if(a<priceArray.length-1){
             sumTotal=sumTotal+plans[priceArray[a+1]];
             if(monthYearFlag==0){
@@ -288,7 +295,7 @@ function finalSummary(){
             }
             $(".info-top-r"+(a+2)+" .info-top-r-left").text(priceArray[a+1]);
         }
-        else{
+        else{               //disappearing unused divs
             $(".info-top-r"+(a+2)).css('display','none');
         }
     }
