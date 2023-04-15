@@ -59,18 +59,18 @@
         <div class="step1-body">  <!--form body-->
           <form action="javascript:void(0);" method="post" onsubmit="pageNo2()">
             <div class="inputs">
-              <div class="input-label">Name</div>
-              <div><input type="text" placeholder="e.g. Charles Darwin" ></div>
+              <div class="input-label">Name<span style="color:red ;">*</span></div>
+              <div><input type="text" placeholder="e.g. Charles Darwin" required></div>
               <div class="error-message off">This field is required.</div>
             </div>
             <div class="inputs">
-              <div class="input-label">Email Address</div>
-              <div><input type="email" placeholder="e.g. gitinit@gmail.com" ></div>
+              <div class="input-label">Email Address<span style="color: red;">*</span></div>
+              <div><input type="email" placeholder="e.g. gitinit@gmail.com" required ></div>
               <div class="error-message off">This field is required.</div>
             </div>
             <div class="inputs">
               <div class="input-label">Phone Number</div>
-              <div><input type="number"  oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0,10);" placeholder="e.g. 0123456789" ></div>
+              <div><input type="number" oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0,10);" minlength="10" placeholder="e.g. 0123456789" ></div>
               <div class="error-message off">This field is required.</div>
             </div>
          
