@@ -1,4 +1,3 @@
-console.log("l;,mao");
 const heading_step1="Personal info";
 const subHeading_step1="Please provide your name, email address, and phone number.";
 
@@ -42,9 +41,7 @@ function pageChangerForward(){
                 pageNo--;
             }else{
                 $(".step2-alert").css('display','none');
-                pageNo3();
-               
-                
+                pageNo3(); 
             }
             
             break;
@@ -76,7 +73,7 @@ function pageChangerBackward(){
 ////////////////////////////////////////////////////////////////////////////////
 
 function pageNo1(){
-    console.log(pageNo);
+    // console.log(pageNo);
     
     footerRightButtonTextColor()
     $(".header-top").text(heading_step1);
@@ -93,10 +90,9 @@ function pageNo1(){
     $(".step4-body").css('display','none');
     $(".global").css('display','none');
 }
-
 function pageNo2(){
     pageNo=2;            //submit button is pressed. now on page 2
-    console.log(pageNo);
+    // console.log(pageNo);
     
     footerRightButtonTextColor()
     // $(".button-left").css('display','flex');     //go back button reappear
@@ -117,7 +113,7 @@ function pageNo2(){
     
 }
 function pageNo3(){
-    console.log(pageNo);
+    //console.log(pageNo);
     footerRightButtonTextColor()
     $(".header-top").text(heading_step3);
     $(".header-bottom").text(subHeading_step3);
@@ -133,7 +129,7 @@ function pageNo3(){
    // $(".global").css('display','flex');
 }
 function pageNo4(){
-    console.log(pageNo);
+    // console.log(pageNo);
     
     footerRightButtonTextColor()
     $(".header-top").text(heading_step4);
@@ -150,7 +146,7 @@ function pageNo4(){
     //$(".global").css('display','flex');
 }
 function finalPage(){
-    console.log(pageNo);
+    // console.log(pageNo);
     $(".main-header").css('display','none');
     // $(".step1-body").css('display','none');
     // $(".step2-body").css('display','none');
@@ -215,7 +211,7 @@ function planSelector(event){
     else{
         priceArray.push("Pro");
     }
-    console.log(priceArray);
+    // console.log(priceArray);
 
     let plans=["plan-one","plan-two","plan-three"];
     for(let a=0;a<plans.length;a++){
@@ -226,7 +222,7 @@ function planSelector(event){
 }
 let flagAddon=0,flagAddon1=0,flagAddon2=0; //0 = new value
 function addOnSelector(event){
-    console.log(event.className);
+    // console.log(event.className);
      
     if(event.className==="add-on1"){
         if(flagAddon==0){
@@ -260,7 +256,7 @@ function addOnSelector(event){
           }
         
     }
-    console.log(priceArray);
+    // console.log(priceArray);
 }
 function arrayPopper(itemName,array){
     const index = array.indexOf(itemName);
@@ -322,5 +318,5 @@ function finalSummary(){
         $(".info-bottom .info-bottom-r-left").text("Total (per year)");
         $(".info-bottom .info-bottom-r-right").text("$"+sumTotal*10+"/yr");
     }
-    console.log(priceArray);
+    // console.log(priceArray);
 }

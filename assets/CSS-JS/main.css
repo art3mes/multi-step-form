@@ -4,13 +4,26 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
 }
+.main-container,.sidebar-step,.plan-types,.month-year,.add-on1,.add-on2,.add-on3,.add-on-left,.info-top-r1,.info-top-r2,.info-top-r3,.info-top-r4,.info-bottom{
+  display: flex;
+  flex-direction: row;
+}
+.main-sidebar,.steps,.step-right,.main-right,.main-header,.main-body,.inputs,.plan-one,.plan-two,.plan-three,.add-onText,.info-top{
+  display: flex;
+  flex-direction: column;
+}
+.add-on1,.add-on2,.add-on3,.info-top-r1,.info-top-r2,.info-top-r3,.info-top-r4,.info-bottom{
+  align-items: center;
+  justify-content: space-between;
+}
+body,.step-left,.month-year,.final-step{
+  align-items: center;
+  justify-content: center;
+}
+
 .main-container{
-    display: flex;
-    flex-direction: row;
     column-gap: 15%;
     background-color: white;
     padding: 15px;
@@ -19,33 +32,22 @@ body{
     min-width: 760px;
 }
 .main-sidebar{
-    display: flex;
-    flex-direction: column;
     row-gap: 30px;
     position: relative;
     color: white;
     letter-spacing: 0.5px;
 }
-.sidebar-background{
-    
-}
 .steps{
     position: absolute;
-    display: flex;
-    flex-direction: column;
     row-gap: 30px;
     top: 6%;
     left: 12%;
 }
 .sidebar-step{
-    display: flex;
-    flex-direction: row;
     column-gap: 18px;
 }
 .step-left{
     display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: 500;
     height: 40px;
     width: 40px;
@@ -53,8 +55,6 @@ body{
     border-radius: 30px; 
 }
 .step-right{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     row-gap: 5px;
 }
@@ -73,18 +73,12 @@ body{
 /* ---------------------------------------------- */
 
 .main-right{
-    display: flex;
-    flex-direction: column;
     width:fit-content;
     letter-spacing: 0.5px;
     margin-top: 30px;
     position: relative;
-    /* align-items: center;            
-    justify-content: center; */
 }
 .main-header{
-    display: flex;
-    flex-direction: column;
     margin-bottom: 2.5rem;
     width:   24vw;
 }
@@ -96,13 +90,7 @@ body{
     font-size: 15px;
     color: rgb(143, 143, 143);
 }
-.main-body{
-    display: flex;
-    flex-direction: column;
-}
 .inputs{
-    display: flex;
-    flex-direction: column;
     row-gap: 6px;
     margin-bottom: 15px;
     position: relative;
@@ -116,10 +104,6 @@ body{
 
 /* ----------------------------------------------- */
 
-.footer-container{
- 
-}
-
 .footer-buttons{
    user-select: none;
 }
@@ -129,7 +113,6 @@ body{
     position: absolute;
     bottom: 2rem;
     left: 0;
-
     display: none;
 }
 .button-right button{
@@ -141,7 +124,6 @@ body{
     font-weight: 500;
     font-family: 'Ubuntu', sans-serif;
     border-radius: 7px;
-
     position: absolute;
     right: 0;
     bottom: 1rem;
@@ -260,13 +242,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
     background-color: white;
   }
   
-/*----------------------------------------------------*/
-  
-/* .step1-body,.step2-body{
-    display: none;           /*remove this*/
- /*}  */
-
-
 /*-----------------step2----------------------------*/
 
 .step2-body{
@@ -277,13 +252,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   width:   24vw;
 }
 .plan-types{
-  display: flex;
-  flex-direction: row;
+   
   column-gap: 16px;
 }
 .plan-one,.plan-two,.plan-three{
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   border: 1px solid rgb(202, 202, 202);
   border-radius: 8px;
@@ -313,11 +285,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
 }
 
 .month-year{
-  display: flex;
-  flex-direction: row;
   column-gap: 20px;
-  align-items: center;
-  justify-content: center;
   background-color: aliceblue;
   margin-right: 12px;
   border-radius: 5px;
@@ -346,12 +314,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   letter-spacing: 0;
   width: 24vw;
 }
-.add-on1,.add-on2,.add-on3{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  
+.add-on1,.add-on2,.add-on3{ 
   border: 1px solid purple;
   padding: 20px;
   border-radius: 7px;
@@ -362,14 +325,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
 }
 
 .add-on-left{
-  display: flex;
-  flex-direction: row;
   align-items: center;
   column-gap: 10px;
-}
-.add-onText{
-  display: flex;
-  flex-direction: column;
 }
 .checkbox{
   /* Double-sized Checkboxes */
@@ -399,18 +356,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   width:   24vw;
 }
 .info-top{
-  display: flex;
-  flex-direction: column;
   row-gap: 20px;
   background-color: #f8f8ff;
   padding: 25px;
   border-radius: 5px;
-}
-.info-top-r1,.info-top-r2,.info-top-r3,.info-top-r4{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 .info-top-r1{
   border-bottom: 1px solid rgb(158, 158, 158);
@@ -432,17 +381,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   font-weight: 700;
 }
 .info-bottom{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   padding: 25px;
 }
 /*---------------------------------------------------*/
 .final-step{
   display: none;
-  align-items: center;
-  justify-content: center;
   row-gap: 15px;
   flex-direction: column;
   text-align: center;
