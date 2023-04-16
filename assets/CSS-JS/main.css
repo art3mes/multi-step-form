@@ -46,6 +46,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
     height: 40px;
     width: 40px;
     border: solid 1px rgb(209, 209, 209);
@@ -330,6 +331,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
   font-size: 12px;
   font-weight: 400;
   color: rgb(135, 135, 255);
+}
+.step2-alert{
+  display: none;
+  color: red;
+  font-size: 13px;
 }
 /*-------------------------------------------*/
 

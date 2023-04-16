@@ -37,7 +37,16 @@ function pageChangerForward(){
             pageNo2();
             break;
         case 3:
-            pageNo3();
+            if(priceArray.length==0){
+                $(".step2-alert").css('display','flex');
+                pageNo--;
+            }else{
+                $(".step2-alert").css('display','none');
+                pageNo3();
+               
+                
+            }
+            
             break;
         case 4:
             finalSummary();
@@ -153,9 +162,9 @@ function finalPage(){
 
 /////////////////////////////////////////////////////////////////////////////
 
-function preventDefaults(event){
-    event.preventDefault();
-}
+// function preventDefaults(event){
+//     event.preventDefault();
+// }
 function footerRightButtonTextColor(){
     if (pageNo===4){
         $(".footer-buttons .button-right button").text("Confirm");
