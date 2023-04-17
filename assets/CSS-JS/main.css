@@ -406,11 +406,16 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus 
 .mobile{
   display: none;
 }
-@media(max-width: 500px) {
-  .main-container{
+@media(max-width: 720px) {
+  .main-sidebar{
     display: none;
   }
-  .mobile{
-    display: block;
+  /* .main-container{
+    
   }
+  .steps{
+    flex-direction: row;
+    column-gap: 20px;
+  } */
+    
 }
